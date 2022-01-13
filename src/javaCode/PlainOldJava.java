@@ -8,6 +8,8 @@ package javaCode;/*
  *
  */
 
+import java.util.Scanner;
+
 public class PlainOldJava {
 
     public static void main(String[] args) {
@@ -15,5 +17,13 @@ public class PlainOldJava {
         String myVarName = "Howdy from Java!";
         //store value "Howdy from Java!" into 0xdeadbeef
         System.out.println(myVarName);
+        Integer y = 3;
+        Integer z = 5;
+        Integer x = y + z;
+//        Integer x = y.add(z);
+//        Integer x = (+ y z);
+
+        //late binding
+        //Integer result = invokemethod(Scanner.in)
     }
 }
