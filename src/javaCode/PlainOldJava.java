@@ -14,9 +14,9 @@ public class PlainOldJava {
 
     public static void main(String[] args) {
         // LHS = RHS
-        String myVarName = "Howdy from Java!";
+//        String myVarName = someFunc();//"Howdy from Java!";
         //store value "Howdy from Java!" into 0xdeadbeef
-        System.out.println(myVarName);
+//        System.out.println(myVarName);
         Integer y = 3;
         Integer z = 5;
         Integer x = y + z;
