@@ -15,7 +15,10 @@ object OurArithExpDSL:
   enum ArithExp:
     case Value(input: BasicType)
     case Var(name: String)
+    case Add(op1: ArithExp, op2: ArithExp)
 
 
   @main def runArithExp: Unit =
-    println("Our first DSL")
+    import ArithExp.*
+    val firstExpression = Add(Add(Value(2), Value(3)),Var("x"))
+    println(firstExpression)
