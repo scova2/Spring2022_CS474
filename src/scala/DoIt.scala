@@ -24,8 +24,11 @@ object DoIt:
 
   }
 
+  def g(p: Int => Int, n:Int):Int = p(n)
+
   @main def runIt(): Unit =
-    println(unitType)
+    val f: Int => Int = (i:Int)=> i+1
+    println(g((i:Int)=> "dd", 3))
 /*
     val newMap = Environment + ("x" -> 2)
     println(newMap)
