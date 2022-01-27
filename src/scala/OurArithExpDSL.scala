@@ -16,9 +16,16 @@ object OurArithExpDSL:
     case Value(input: BasicType)
     case Var(name: String)
     case Add(op1: ArithExp, op2: ArithExp)
+    private val bindingScoping: Map[String, Int] = Map("x"->2, "Adan"->10)
 
+    def eval: BasicType =
+      this match {
+        case Value(i) => i
+        case Var(name) => bindingScoping(name)
+        case Add(op1, op2) => op1.eval + op2.eval
+      }
 
   @main def runArithExp: Unit =
     import ArithExp.*
-    val firstExpression = Add(Add(Value(2), Value(3)),Var("x"))
+    val firstExpression = Add(Add(Value(2), Value(3)),Var("Adan")).eval
     println(firstExpression)
