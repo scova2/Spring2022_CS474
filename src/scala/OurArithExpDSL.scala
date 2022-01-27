@@ -10,25 +10,12 @@ package scala
  *  
  */
 
-object DoIt:
-  val Environment: Map[String, Int] = Map("myVariableName" -> 92893)
-  var myVariableName: String = "Howdy, CS474!"
-  val unitType:Null = {
-    val x = 1
-    null
-  }
+object OurArithExpDSL:
+  type BasicType = Int
+  enum ArithExp:
+    case Value(input: BasicType)
+    case Var(name: String)
 
-  val nill = new {
-    def isNull = true
-    def head = throw new NoSuchElementException
 
-  }
-
-  @main def runIt(): Unit =
-    println(unitType)
-/*
-    val newMap = Environment + ("x" -> 2)
-    println(newMap)
-    myVariableName = "Sergio"
-    println(myVariableName)
-*/
+  @main def runArithExp: Unit =
+    println("Our first DSL")
